@@ -1,0 +1,40 @@
+.features {
+  &-title {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #ff014f;
+    text-transform: uppercase;
+  }
+  &-heading {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 22px;
+  }
+
+  &-item-title{
+    font-weight: 600;
+    line-height: 32px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    color: #c4cfde;
+  }
+
+  &-item-description{
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    color: #c4cfde;
+  }
+  
+  &-items:hover{
+      transform: translateY(-20px) translateX(0px);
+      transition-duration: 1s;
+  }
+}
+

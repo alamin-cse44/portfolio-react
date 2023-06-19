@@ -1,0 +1,29 @@
+@import "../../sass/general.scss";
+
+.resume {
+  &-top {
+    text-align: center;
+
+    &-text1 {
+      @include text-style(14px, 500, "", #ff014f);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    &-text2 {
+      @include text-style('', 900, 32px, #c4cfde);
+      letter-spacing: 3px;
+      margin-top: 40px;
+    }
+  }
+
+  &-tablist{
+    // background-color: #202327;
+    // box-shadow: 0px 3px 10px rgb(0 0 0/ 0.99);
+    color: #c4cfde;
+  }
+  &-tab{
+    font-size: 40px;
+    margin-right: 25px;
+  }
+}

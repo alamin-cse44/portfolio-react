@@ -1,0 +1,63 @@
+@import "../../sass/general.scss";
+
+.portfolio {
+  &-top {
+    text-align: center;
+
+    &-text1 {
+      @include text-style(14px, 500, "", #ff014f);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    &-text2 {
+      @include text-style(40px, 900, 40px, #c4cfde);
+      letter-spacing: 3px;
+      margin-top: 40px;
+    }
+  }
+
+  &-project-card :hover {
+    background-color: linear-gradient(to right bottom, #212428, #16181c);
+  }
+
+  &-project-image {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+
+  &-project-image:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  &-project-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #ff014f;
+    text-transform: uppercase;
+  }
+
+  &-project-description {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: justify;
+    color: #c4cfde;
+    letter-spacing: 2px;
+  }
+
+  &-project-btn {
+    @include project-btn();
+  }
+  &-project-btn:hover {
+    @include project-btn-hover(1px solid #f44336, #f44336, 1s);
+  }
+}
+
+.modal-style {
+  @include modal-style();
+}
