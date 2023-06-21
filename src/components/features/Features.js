@@ -1,6 +1,9 @@
-import {  Box, Divider, Grid, Paper } from "@mui/material";
+import { Box, Divider, Grid, Paper, Typography } from "@mui/material";
 
 import WebIcon from "@mui/icons-material/Web";
+
+import Title1 from "../../common/Title1";
+import Title2 from "../../common/Title2";
 
 import "./Features.scss";
 
@@ -51,9 +54,9 @@ const features = [
 
 const Features = () => {
   return (
-    <Box className="features" sx={{ mx: 5, mt: 10 }}>
-      <p className="features-title">FEATURES</p>
-      <p className="features-heading">What I Do</p>
+    <Box className="features" sx={{ mx: 3, mt: 10 }}>
+      <Title1 title="FEATURES" />
+      <Title2 title="What I Do" />
 
       <Box sx={{ flexGrow: 1, mt: 7 }}>
         <Grid
@@ -69,21 +72,51 @@ const Features = () => {
                   p: 3,
                   bgcolor: "#202327",
                   boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
+                  borderRadius: '15px'
                 }}
               >
                 <Box className="features-items">
                   <span style={{ color: "#ff014f" }}>{item.icon}</span>
-                  <p className="features-item-title">{item.title}</p>
-                  <p className="features-item-description">
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        lg: 30,
+                        md: 30,
+                        sm: 20,
+                        xs: 20,
+                      },
+                      mt: 3,
+                      letterSpacing: '1px',
+                      fontWeight: "700",
+                      color: "#c4cfde",
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        lg: 20,
+                        md: 20,
+                        sm: 16,
+                        xs: 16,
+                      },
+                      mt: 3,
+                      letterSpacing: '2px',
+                      fontWeight: "500",
+                      color: "#c4cfde",
+                    }}
+                  >
                     {item.description}
-                  </p>
+                  </Typography>
                 </Box>
               </Paper>
             </Grid>
           ))}
         </Grid>
       </Box>
-      <Divider sx={{background: '#121415', mt:15}} />
+      <Divider sx={{ background: "#121415", mt: 15 }} />
     </Box>
   );
 };

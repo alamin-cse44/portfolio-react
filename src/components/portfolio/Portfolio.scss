@@ -33,23 +33,6 @@
     transform: scale(1.1);
   }
 
-  &-project-title {
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    color: #ff014f;
-    text-transform: uppercase;
-  }
-
-  &-project-description {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: justify;
-    color: #c4cfde;
-    letter-spacing: 2px;
-  }
-
   &-project-btn {
     @include project-btn();
   }

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import Tab from "@material-ui/core/Tab";
 import TabContext from "@material-ui/lab/TabContext";
 import TabList from "@material-ui/lab/TabList";
@@ -7,9 +7,12 @@ import TabPanel from "@material-ui/lab/TabPanel";
 
 import Education from "./education/Education";
 import ProfessionalSkills from "./professional-skills/ProfessionalSkills";
+import Experience from "./experience/Experience";
+
+import Title1 from "../../common/Title1";
+import Title2 from "../../common/Title2";
 
 import "./Resume.scss";
-import Experience from "./experience/Experience";
 
 const Resume = () => {
   const [value, setValue] = React.useState("1");
@@ -18,23 +21,11 @@ const Resume = () => {
     setValue(newValue);
   };
   return (
+
     <Box className="resume" sx={{ mx: 2, mt: 10 }}>
-      <Box className="resume-top">
-        <p className="resume-top-text1">1+ YEARS OF EXPERIENCE</p>
-        {/* <p className="resume-top-text2">My Resume</p> */}
-        <Typography
-          className="resume-top-text2"
-          sx={{
-            fontSize: {
-              lg: 60,
-              md: 50,
-              sm: 45,
-              xs: 40,
-            },
-          }}
-        >
-          My Resume
-        </Typography>
+      <Box sx={{textAlign: 'center'}}>
+        <Title1 title="1+ YEARS OF EXPERIENCE" />
+        <Title2 title="My Resume" />
       </Box>
 
       <Box sx={{ width: "100%", mt: 10 }}>
@@ -86,6 +77,7 @@ const Resume = () => {
           </TabPanel>
         </TabContext>
       </Box>
+      <Divider sx={{ background: "#121415", mt: 15 }} />
     </Box>
   );
 };

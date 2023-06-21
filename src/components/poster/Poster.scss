@@ -1,5 +1,4 @@
 .poster {
-  margin-top: 200px;
 
   &-welcome {
     font-size: 14px;
@@ -9,23 +8,9 @@
     text-transform: uppercase;
   }
   &-heading {
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 45px;
-    line-height: 62px;
-    margin-top: 22px;
-
     &-red {
       color: #ff014f;
     }
-  }
-
-  &-typeText {
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 35px;
-    line-height: 62px;
-    margin-top: 15px;
   }
 
   &-description {

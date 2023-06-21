@@ -4,17 +4,19 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper";
 
-import { Box, Divider } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Typography from '@mui/material/Typography';
 
 import girl from "../../images/girl.avif";
 
-import "./Portfolio.scss";
 import ModalTest from "./ModalTest";
+import Title1 from "../../common/Title1";
+import Title2 from "../../common/Title2";
+
+import "./Portfolio.scss";
 
 const Portfolio = () => {
   const [open, setOpen] = React.useState(false);
@@ -57,12 +59,10 @@ const Portfolio = () => {
   ];
 
   return (
-    <Box className="portfolio" sx={{ mx: 5, mt: 10 }}>
+    <Box className="portfolio" sx={{ mx: 3, mt: 10 }}>
       <Box className="portfolio-top">
-        <p className="portfolio-top-text1">
-          VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
-        </p>
-        <p className="portfolio-top-text2">My Portfolio</p>
+        <Title1 title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK" />
+        <Title2 title="My Portfolio" />
       </Box>
 
       <Swiper
@@ -125,10 +125,38 @@ const Portfolio = () => {
                 title="green iguana"
               />
               <CardContent>
-                <p className="portfolio-project-title">{items.title}</p>
-                <p variant="body2" className="portfolio-project-description">
+                <Typography
+                  sx={{
+                    fontSize: {
+                      lg: 22,
+                      md: 22,
+                      sm: 18,
+                      xs: 18,
+                    },
+                    fontWeight: "700",
+                    color: "#ff014f",
+                    letterSpacing: '3px',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  {items.title}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      lg: 20,
+                      md: 20,
+                      sm: 15,
+                      xs: 15,
+                    },
+                    mt:2,
+                    textAlign: "justify",
+                    fontWeight: "600",
+                    color: "#c4cfde",
+                  }}
+                >
                   {items.description}
-                </p>
+                </Typography>
               </CardContent>
               <CardActions sx={{ display: "flex", gap: "10px" }}>
                 <div>
@@ -149,7 +177,7 @@ const Portfolio = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Divider sx={{background: '#121415', mt:15}} />
+      <Divider sx={{ background: "#121415", mt: 15 }} />
     </Box>
   );
 };
