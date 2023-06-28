@@ -22,7 +22,7 @@ const Resume = () => {
   };
   return (
 
-    <Box className="resume" sx={{ mx: 2, mt: 10 }}>
+    <Box id="resume" className="resume" sx={{ mx: 2, mt: 10 }}>
       <Box sx={{textAlign: 'center'}}>
         <Title1 title="1+ YEARS OF EXPERIENCE" />
         <Title2 title="My Resume" />

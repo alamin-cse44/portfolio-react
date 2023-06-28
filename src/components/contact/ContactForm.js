@@ -2,7 +2,18 @@ import { Box } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+
+import { useForm, ValidationError } from "@formspree/react";
+
 const ContactForm = () => {
+  const [state, handleSubmit] = useForm("xwkdeoog");
+  if (state.succeeded) {
+    return (
+      <p style={{ fontSize: "18px", fontWeight: 700, color: "#ff014f" }}>
+        Thanks for joining!
+      </p>
+    );
+  }
   return (
     <Box>
       <Card
@@ -16,8 +27,8 @@ const ContactForm = () => {
       >
         <CardContent>
           <div className="form">
-            <form action="">
-              <label className="form-label" for="name">
+            <form onSubmit={handleSubmit}>
+              <label className="form-label" htmlFor="name">
                 Your Name
               </label>
               <input
@@ -27,17 +38,17 @@ const ContactForm = () => {
                 placeholder="ie: Kazi Nazrul Islam"
               />
 
-              <label className="form-label" for="email">
+              <label className="form-label" htmlFor="email">
                 Your Email
               </label>
               <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 placeholder="ie: nazrul@gmail.com"
               />
 
-              <label className="form-label" for="phone">
+              <label className="form-label" htmlFor="phone">
                 Your Phone
               </label>
               <input
@@ -47,12 +58,24 @@ const ContactForm = () => {
                 placeholder="ie: +880 1643530690"
               />
 
-              <label className="form-label" for="message">
+              <label className="form-label" htmlFor="message">
                 Your Message
               </label>
-              <textarea id="w3review" name="message" rows="4" cols="50" placeholder="Write your message here.." />
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+                placeholder="Write your message here.."
+              />
 
-              <button className="form-btn" type="submit">SEND MESSAGE</button> 
+              <button
+                className="form-btn"
+                type="submit"
+                disabled={state.submitting}
+              >
+                SEND MESSAGE
+              </button>
             </form>
           </div>
         </CardContent>

@@ -1,5 +1,5 @@
 import Modal from "@mui/material/Modal";
-import { Box, Divider, Fab, Typography } from "@mui/material";
+import { Box, Divider, Fab } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 
@@ -15,7 +15,7 @@ import girl from "../../images/girl.avif";
 
 import "./ModalTest.scss";
 
-const features = [
+const studentTech = [
   {
     id: 1,
     icon: react,
@@ -24,34 +24,31 @@ const features = [
   {
     id: 2,
     icon: react,
-    title: "Typescript",
+    title: "React",
   },
   {
     id: 3,
     icon: react,
-    title: "Material-ui",
+    title: "React",
   },
   {
     id: 4,
     icon: react,
-    title: "Sass",
+    title: "React",
   },
-  {
-    id: 5,
-    icon: react,
-    title: "Firebase",
-  },
-  {
-    id: 6,
-    icon: react,
-    title: "Node.js",
-  },
+//   {
+//     id: 5,
+//     icon: react,
+//     title: "React",
+//   },
+//   {
+//     id: 6,
+//     icon: react,
+//     title: "React",
+//   },
 ];
 
-const ModalTest = ({ project, technology, open, handleClose }) => {
-  console.log(typeof technology);
-  const { modalTitle, img, brief, client, date, service, budget, description } =
-    project;
+const StudentCareline = ({ open, handleClose }) => {
   return (
     <div>
       <Modal
@@ -93,41 +90,43 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                   className="mySwiper"
                 >
                   <SwiperSlide>
-                    <img src={img} alt="" style={{ width: "100%" }} />
+                    <img src={girl} alt="" style={{ width: "100%" }} />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src={img} alt="" style={{ width: "100%" }} />
+                    <img src={girl} alt="" style={{ width: "100%" }} />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src={img} alt="" style={{ width: "100%" }} />
+                    <img src={girl} alt="" style={{ width: "100%" }} />
                   </SwiperSlide>
                 </Swiper>
               </Grid>
 
               <Grid item xs={12} md={6} lg={6}>
-                <p className="project-name">{modalTitle}</p>
-                <p className="project-description">{brief}</p>
+                <p className="project-name">Student careline Web Application</p>
+                <p className="project-description">
+                  Student careline description
+                </p>
                 <Box sx={{ flexGrow: 1, mt: 5 }}>
                   <Grid container spacing={2}>
                     <Grid item xs={6} md={8}>
                       <span className="project-key">Client: </span>
-                      <span className="project-value">{client}</span>
+                      <span className="project-value">IQC Company</span>
                     </Grid>
                     <Grid item xs={6} md={4}>
                       <span className="project-key">Date: </span>
-                      <span className="project-value">{date}</span>
+                      <span className="project-value">15 June 2023</span>
                     </Grid>
                     <Grid item xs={6} md={8}>
                       <span className="project-key">Services: </span>
-                      <span className="project-value">{service}</span>
+                      <span className="project-value">Web Application</span>
                     </Grid>
                     <Grid item xs={6} md={4}>
                       <span className="project-key">Budget: </span>
-                      <span className="project-value">{budget} </span>
+                      <span className="project-value">$10000 </span>
                     </Grid>
                   </Grid>
                 </Box>
-                <Box sx={{ mt: 15 }}>
+                <Box sx={{ mt: 5 }}>
                   <button className="portfolio-project-btn">
                     View Project
                   </button>
@@ -143,7 +142,7 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                   spacing={{ xs: 2, md: 3, lg: 5 }}
                   columns={{ xs: 4, sm: 8, md: 12 }}
                 >
-                  {features.map((item) => (
+                  {studentTech.map((item) => (
                     <Grid item xs={2} sm={2} md={2} key={item.id}>
                       <Paper
                         elevation={3}
@@ -158,29 +157,13 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                           style={{ textAlign: "center" }}
                         >
                           <figure>
-                            <img
-                              style={{ width: "50px", textAlign: "center" }}
-                              src={item.icon}
-                              alt=""
-                            />
+                          <img
+                            style={{ width: "50px", textAlign: "center" }}
+                            src={item.icon}
+                            alt=""
+                          />
                           </figure>
-                          {/* <p className="features-item-title">{item.title}</p> */}
-                          <Typography
-                            sx={{
-                              fontSize: {
-                                lg: 20,
-                                md: 20,
-                                sm: 15,
-                                xs: 15,
-                              },
-                              mt: 2,
-                              textAlign: "center",
-                              fontWeight: "600",
-                              color: "#c4cfde",
-                            }}
-                          >
-                            {item.title}
-                          </Typography>
+                          <p style={{color: 'red'}} className="features-item-title">{item.title}</p>
                         </Box>
                       </Paper>
                     </Grid>
@@ -188,7 +171,17 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                 </Grid>
               </Box>
               <p className="project-name">What They Do? </p>
-              <p className="project-description">{description}</p>
+              <p className="project-description">
+                A leading online platform connecting businesses with experts
+                across various industries. Our mission is to simplify the
+                process of finding and hiring top talent for any project, big or
+                small. At ExpertHire, we believe in the power of freelancing and
+                the value it brings to both businesses and experts. We are
+                committed to providing a user-friendly platform that makes it
+                easy for businesses to find the perfect expert for their
+                project, and for experts to showcase their skills and connect
+                with potential clients.
+              </p>
             </Box>
           </Box>
         </Box>
@@ -197,4 +190,4 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
   );
 };
 
-export default ModalTest;
+export default StudentCareline;

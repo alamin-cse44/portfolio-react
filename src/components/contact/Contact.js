@@ -14,9 +14,6 @@ import ContactForm from "./ContactForm";
 
 import contact from "../../images/contact.png";
 
-// import { useCallback } from "react";
-// import Particles from "react-particles";
-// import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -36,7 +33,7 @@ const Contact = () => {
     await console.log(container);
   }, []);
   return (
-    <Box className="contact" sx={{ mx: 3, mt: 10 }}>
+    <Box id="contact" className="contact" sx={{ mx: 3, mt: 10 }}>
       <Particles
         id="tsparticles"
         init={particlesInit}
