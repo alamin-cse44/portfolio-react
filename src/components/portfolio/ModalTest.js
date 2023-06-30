@@ -50,8 +50,17 @@ const features = [
 
 const ModalTest = ({ project, technology, open, handleClose }) => {
   console.log(typeof technology);
-  const { modalTitle, img, brief, client, date, service, budget, description } =
-    project;
+  const {
+    modalTitle,
+    img,
+    brief,
+    client,
+    date,
+    service,
+    budget,
+    live,
+    description,
+  } = project;
   return (
     <div>
       <Modal
@@ -93,13 +102,28 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                   className="mySwiper"
                 >
                   <SwiperSlide>
-                    <img src={img} alt="" style={{ width: "100%" }} />
+                    <img
+                      src={img}
+                      height={400}
+                      alt=""
+                      style={{ width: "100%" }}
+                    />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src={img} alt="" style={{ width: "100%" }} />
+                    <img
+                      src={img}
+                      height={400}
+                      alt=""
+                      style={{ width: "100%" }}
+                    />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src={img} alt="" style={{ width: "100%" }} />
+                    <img
+                      src={img}
+                      height={400}
+                      alt=""
+                      style={{ width: "100%" }}
+                    />
                   </SwiperSlide>
                 </Swiper>
               </Grid>
@@ -127,10 +151,12 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                     </Grid>
                   </Grid>
                 </Box>
-                <Box sx={{ mt: 15 }}>
-                  <button className="portfolio-project-btn">
-                    View Project
-                  </button>
+                <Box sx={{ mt: 8 }}>
+                  <a href={live} target="blank">
+                    <button className="portfolio-project-btn" size="small">
+                      View Project
+                    </button>
+                  </a>
                 </Box>
               </Grid>
             </Grid>
