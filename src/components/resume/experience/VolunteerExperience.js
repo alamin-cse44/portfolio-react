@@ -53,10 +53,10 @@ const VolunteerExperience = () => {
                     <Typography
                       sx={{
                         fontSize: {
-                          lg: 35,
-                          md: 35,
-                          sm: 20,
-                          xs: 18,
+                          lg: 32,
+                          md: 32,
+                          sm: 17,
+                          xs: 17,
                         },
                         fontWeight: "700",
                         color: "#c4cfde",

@@ -19,7 +19,7 @@ const jobExperience = [
     institution: "3WIP(February 2023 - April)",
     grade: "India",
     description:
-    "Expert hiring process is an important part of our age. IQC care deeply about their teams and the people who make them up."
+    "Backend hiring process is an important part of our age. 3WIP care deeply about their teams and the people who make them up."
     },
   {
     id: 3,
@@ -27,7 +27,7 @@ const jobExperience = [
     institution: "Pridesys IT(September 2022 - November)",
     grade: "Dhaka",
     description:
-    "Expert hiring process is an important part of our age. IQC care deeply about their teams and the people who make them up."
+    "Frontend hiring process is an important part of our age. Pridesys care deeply about their teams and the people who make them up."
     },
 ];
 
@@ -53,10 +53,10 @@ const JobExperience = () => {
                     <Typography
                       sx={{
                         fontSize: {
-                          lg: 35,
-                          md: 35,
-                          sm: 20,
-                          xs: 18,
+                          lg: 32,
+                          md: 32,
+                          sm: 17,
+                          xs: 17,
                         },
                         fontWeight: "700",
                         color: "#c4cfde",
