@@ -10,43 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper";
 
-import react from "../../images/react.png";
-import girl from "../../images/girl.avif";
-
 import "./ModalTest.scss";
-
-const features = [
-  {
-    id: 1,
-    icon: react,
-    title: "React",
-  },
-  {
-    id: 2,
-    icon: react,
-    title: "Typescript",
-  },
-  {
-    id: 3,
-    icon: react,
-    title: "Material-ui",
-  },
-  {
-    id: 4,
-    icon: react,
-    title: "Sass",
-  },
-  {
-    id: 5,
-    icon: react,
-    title: "Firebase",
-  },
-  {
-    id: 6,
-    icon: react,
-    title: "Node.js",
-  },
-];
 
 const ModalTest = ({ project, technology, open, handleClose }) => {
   console.log(typeof technology);
@@ -169,7 +133,7 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                   spacing={{ xs: 2, md: 3, lg: 5 }}
                   columns={{ xs: 4, sm: 8, md: 12 }}
                 >
-                  {features.map((item) => (
+                  {technology.map((item) => (
                     <Grid item xs={2} sm={2} md={2} key={item.id}>
                       <Paper
                         elevation={3}
@@ -185,9 +149,9 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                         >
                           <figure>
                             <img
-                              style={{ width: "50px", textAlign: "center" }}
+                              style={{ width: "50px", textAlign: "center", color: "#ff014f" }}
                               src={item.icon}
-                              alt=""
+                              alt="Tech"
                             />
                           </figure>
                           {/* <p className="features-item-title">{item.title}</p> */}
@@ -214,7 +178,7 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                 </Grid>
               </Box>
               <p className="project-name">What They Do? </p>
-              <p className="project-description">{description}</p>
+              <Typography sx={{mb:8}} className="project-description">{description}</Typography>
             </Box>
           </Box>
         </Box>

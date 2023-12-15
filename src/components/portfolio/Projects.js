@@ -16,6 +16,7 @@ import "./Portfolio.scss";
 
 const Projects = ({ project }) => {
   const { title, img, brief, live } = project;
+  console.log(project.technology);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

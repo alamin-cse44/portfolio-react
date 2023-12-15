@@ -1,9 +1,6 @@
-import * as React from "react";
-import { Box, Divider } from "@mui/material";
-import Tab from "@material-ui/core/Tab";
-import TabContext from "@material-ui/lab/TabContext";
-import TabList from "@material-ui/lab/TabList";
-import TabPanel from "@material-ui/lab/TabPanel";
+import React, { useState } from "react";
+import { Divider } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";
 
 import Education from "./education/Education";
 import ProfessionalSkills from "./professional-skills/ProfessionalSkills";
@@ -15,68 +12,84 @@ import Title2 from "../../common/Title2";
 import "./Resume.scss";
 
 const Resume = () => {
-  const [value, setValue] = React.useState("1");
+  const [route, setRoute] = useState("education");
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
   return (
-
-    <Box id="resume" className="resume" sx={{ mx: 2, mt: 10 }}>
-      <Box sx={{textAlign: 'center'}}>
+    <Box id="resume" sx={{ mx: 2, pt: 10 }}>
+      <Box sx={{ textAlign: "center" }}>
         <Title1 title="1+ YEARS OF EXPERIENCE" />
         <Title2 title="My Resume" />
       </Box>
-
-      <Box sx={{ width: "100%", mt: 10 }}>
-        <TabContext value={value}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList
-              className="resume-tablist"
-              onChange={handleChange}
-              variant="scrollable"
-              scrollButtons="auto"
-              aria-label="scrollable auto tabs example"
-            >
-              <Tab
-                style={{
-                  fontWeight: "900",
-                  fontSize: "17px",
-                  marginRight: "25px",
-                }}
-                label="Education"
-                value="1"
-              />
-              <Tab
-                style={{
-                  fontWeight: "900",
-                  fontSize: "17px",
-                  marginRight: "25px",
-                }}
-                label="Professional Skills"
-                value="2"
-              />
-              <Tab
-                style={{
-                  fontWeight: "900",
-                  fontSize: "17px",
-                }}
-                label="Experience"
-                value="3"
-              />
-            </TabList>
-          </Box>
-          <TabPanel value="1">
-            <Education />
-          </TabPanel>
-          <TabPanel value="2">
-            <ProfessionalSkills />
-          </TabPanel>
-          <TabPanel value="3">
-            <Experience />
-          </TabPanel>
-        </TabContext>
-      </Box>
+      <Tabs
+        value={route}
+        onChange={(e, newValue) => setRoute(newValue)}
+        sx={{
+          mx: "auto",
+          my: 5,
+          width: "fit-content",
+          // boxShadow: "0px 4px 25px rgba(0, 0, 0, 0.1)",
+          backgroundColor: "#fff",
+          // borderRadius: "50px",
+          minWidth: {
+            xs: "90vw",
+            sm: "530px",
+          },
+          maxWidth: "90vw",
+          "& .MuiTabs-flexContainer": {
+            justifyContent: "space-between",
+          },
+          "& .MuiTabs-flexContainer > *": {
+            flex: 1,
+          },
+          "& .MuiTabs-indicator": {
+            backgroundColor: "transparent",
+          },
+        }}
+      >
+        <Tab
+          value={"education"}
+          label={"Education"}
+          sx={{
+            textTransform: "none",
+            fontSize: { xs: "0.8rem", md: "1.5rem" },
+            fontWeight: "bold",
+            // borderRadius: "50px",
+            "&:hover": {
+              opacity: 1,
+              color: "#333",
+            },
+            "&.Mui-selected": {
+              color: "#fff",
+              background: "#ff014f",
+            },
+            "&.Mui-focusVisible": {
+              backgroundColor: "#d1eaff",
+            },
+          }}
+        />
+        <Tab
+          value={"experience"}
+          label={"Experience"}
+          sx={{
+            textTransform: "none",
+            fontSize: { xs: "0.8rem", md: "1.5rem" },
+            fontWeight: "bold",
+            // borderRadius: "50px",
+            "&:hover": {
+              opacity: 1,
+              color: "#333",
+            },
+            "&.Mui-selected": {
+              color: "#fff",
+              background: "#ff014f",
+            },
+            "&.Mui-focusVisible": {
+              backgroundColor: "#d1eaff",
+            },
+          }}
+        />
+      </Tabs>
+      {route === "education" ? <Education /> : <Experience />}
       <Divider sx={{ background: "#121415", mt: 15 }} />
     </Box>
   );

@@ -12,6 +12,7 @@ import { Avatar, Divider, Stack, Typography } from "@mui/material";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import ar from "../../images/ar.png";
+import profile from "../../images/profile.jpg";
 
 import "./Poster.scss";
 
@@ -19,9 +20,9 @@ const Poster = () => {
   const [text] = useTypewriter({
     words: [
       "Software Developer",
-      "Designer",
-      "React Developer",
+      "React.js Developer",
       "Node.js Developer",
+      "Mern Stack Dev"
     ],
     loop: {},
     typeSpeed: 120,
@@ -29,7 +30,7 @@ const Poster = () => {
   });
 
   return (
-    <Box id="poster" className="poster" sx={{ flexGrow: 1, mx: 5, mt: 15 }}>
+    <Box id="poster" className="poster" sx={{ flexGrow: 1, mx: 5, pt: 15 }}>
       <Grid
         sx={{ display: "flex", alignItems: "center" }}
         container
@@ -57,10 +58,8 @@ const Poster = () => {
           <Typography
             sx={{
               fontSize: {
-                lg: 45,
-                md: 45,
                 sm: 28,
-                xs: 28,
+                xs: 20,
               },
               mt: 1,
               fontWeight: "800",
@@ -75,11 +74,24 @@ const Poster = () => {
           </Typography>
 
           <p className="poster-description">
-            I do code for software dvelopment. I can handle both client side and
+            {/* I do code for software dvelopment. I can handle both client side and
             sever side of a software. I'm used to React.js library for frontend
             development and firebase for authentication system. Also, for the
             behind the scenes data storage and proecessing I have skilled on
-            Node.js (Express.js framework and mongoose/mongodb as database).
+            Node.js (Express.js framework and mongoose/mongodb as database). */}
+            I have completed my Bachelor of Science degree in computer science
+            and engineering from the University of Asia Pacific, Bangladesh. I'm
+            a positive, enthusiastic and competent web developer. I have a
+            diverse range of programming skills like : JavaScript, Bootstrap,
+            Material-UI, React.js, Node.js Firebase , Heroku, MongoDB, C, C++,
+            Python, Mongoose, MySql. I have extensive experience working both
+            alone and as a part of a team to implement a project. I’m time
+            sensitive and like to take on challenging web development projects
+            by the requirements of clients. I have working experience at IQC
+            company in France from November 2022 to May 2023 as a frontend
+            developer. At present I’m working for Brogrammers Lab as a frontend
+            Developer. I take my work as a developer and programmer seriously
+            and surely I will update myself for the rapidly changing industry.
           </p>
           <Grid container spacing={5} sx={{ mt: 5 }}>
             <Grid item xs={12} md={6} lg={6}>
@@ -190,7 +202,8 @@ const Poster = () => {
             justifyContent: "center",
           }}
         >
-          <img src={ar} alt="" />
+          {/* <img src={profile} alt="profile" /> */}
+          <Avatar src={profile} sx={{width: "60%", height: "60%", border: "2px solid #ff014f"}} />
         </Grid>
       </Grid>
       <Divider sx={{ background: "#121415", mt: 15 }} />

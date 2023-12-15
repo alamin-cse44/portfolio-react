@@ -43,7 +43,8 @@ const VolunteerExperience = () => {
               p: 3,
               bgcolor: "#202327",
               boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
-              borderRadius: '10px'
+              borderRadius: '10px',
+              border: "1px solid #ff014f"
             }}
           >
             <Box>
@@ -102,7 +103,7 @@ const VolunteerExperience = () => {
                 </Grid>
               </Box>
               <Box></Box>
-              <Divider sx={{ background: "#121415", my: 5 }} />
+              <Divider sx={{ background: "#121415", my: 3 }} />
               <Typography
                 sx={{
                   fontSize: {

@@ -102,7 +102,7 @@ const JobExperience = () => {
                 </Grid>
               </Box>
               <Box></Box>
-              <Divider sx={{ background: "#121415", my: 5 }} />
+              <Divider sx={{ background: "#121415", my: 3 }} />
               <Typography
                 sx={{
                   fontSize: {

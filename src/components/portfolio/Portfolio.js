@@ -11,9 +11,12 @@ import Title2 from "../../common/Title2";
 import react from "../../images/react.png";
 
 import expert from "../../images/expert.png";
-import student from "../../images/student.png";  
-import doctor from "../../images/doctor.png";  
+import student from "../../images/student.png";
+import doctor from "../../images/doctor.png";
 import university from "../../images/university.png";
+
+import { FaReact } from "react-icons/fa6";
+import { IoLogoReact } from "react-icons/io5";
 
 import Projects from "./Projects";
 
@@ -36,12 +39,12 @@ const Portfolio = () => {
       description:
         " A leading online platform connecting businesses with experts across various industries. Our mission is to simplify the, process of finding and hiring top talent for any project, big or small. At ExpertHire, we believe in the power of freelancing and the value it brings to both businesses and experts. We are committed to providing a user-friendly platform that makes it easy for businesses to find the perfect expert for their project, and for experts to showcase their skills and connect with potential clients. ",
       technology: [
-        { id: 1, title: "React", icon: react },
-        { id: 1, title: "Typescript", icon: "" },
-        { id: 1, title: "Material-ui", icon: "" },
-        { id: 1, title: "Sass", icon: "" },
-        { id: 1, title: "Firebase", icon: "" },
-        { id: 1, title: "Dot net", icon: "" },
+        { id: 1, title: "React", icon: <IoLogoReact /> },
+        { id: 2, title: "Typescript", icon: "" },
+        { id: 3, title: "Material-ui", icon: "" },
+        { id: 4, title: "Sass", icon: "" },
+        { id: 5, title: "Firebase", icon: "" },
+        { id: 6, title: "Dot net", icon: "" },
       ],
     },
     {
@@ -58,6 +61,12 @@ const Portfolio = () => {
       live: "https://students-careline-alamin.netlify.app/",
       description:
         "It’s a frontend website implemented by using React, react-router, bootstrap. This project is implemented for students to get online education services. With Careline making the transition to remote learning so easy, that too has contributed to my daughter's on-going growth. Careline made sure that they worked with the teacher and family to make the transition easy. The teacher is providing weekly zoom lessons with Varsha, and works with the students according to the devices that they have at home.",
+      technology: [
+        { id: 1, title: "React", icon: react },
+        { id: 2, title: "react-bootstrap", icon: "" },
+        { id: 3, title: "react-router v5", icon: "" },
+        { id: 4, title: "css", icon: "" },
+      ],
     },
     {
       id: 3,
@@ -73,6 +82,13 @@ const Portfolio = () => {
       live: "https://students-careline-alamin.netlify.app/",
       description:
         "It’s a full stack website implemented by using React, React-router-6, daisy-ui, node-js, express-js, JWT, firebase, heroku where three type of users are exist patient, doctor & admin. The users must go through the authentication process for booking or treating any service. Dashboard is different for the users, patients can book service or cancel service with review. Doctors give their service by seeing the booking schedule.",
+      technology: [
+        { id: 1, title: "React", icon: react },
+        { id: 2, title: "Tailwind css", icon: "" },
+        { id: 3, title: "css", icon: "" },
+        { id: 4, title: "Firebase", icon: "" },
+        { id: 5, title: "Node Js", icon: "" },
+      ],
     },
     {
       id: 4,
@@ -88,12 +104,16 @@ const Portfolio = () => {
       live: "https://alamin-cse44.github.io/university-web-landing-page/",
       description:
         "It’s a University landing page website. A University website where you are available to see their education system and culture. UI is implemented by using raw HTML, CSS and Javascript for dynamic output.",
+      technology: [
+        { id: 1, title: "HTML", icon: react },
+        { id: 1, title: "CSS", icon: "" },
+      ],
     },
   ];
 
   return (
     <>
-      <Box id="portfolio" className="portfolio" sx={{ mx: 3, mt: 10 }}>
+      <Box id="portfolio" className="portfolio" sx={{ mx: 3, pt: 10 }}>
         <Box className="portfolio-top">
           <Title1 title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK" />
           <Title2 title="My Portfolio" />

@@ -33,8 +33,8 @@ const Contact = () => {
     await console.log(container);
   }, []);
   return (
-    <Box id="contact" className="contact" sx={{ mx: 3, mt: 10 }}>
-      <Particles
+    <Box id="contact" className="contact" sx={{ mx: 3, pt: 10 }}>
+      {/* <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
@@ -110,7 +110,7 @@ const Contact = () => {
           },
           detectRetina: true,
         }}
-      />
+      /> */}
       
       <Box sx={{ textAlign: "center" }}>
         <Title1 title="Contact" />

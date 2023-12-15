@@ -54,14 +54,14 @@ const navItems = [
       </a>
     ),
   },
-  {
-    id: 5,
-    link: (
-      <a className="navItems" href="#resume">
-        PUBLICATION
-      </a>
-    ),
-  },
+  // {
+  //   id: 5,
+  //   link: (
+  //     <a className="navItems" href="#resume">
+  //       PUBLICATION
+  //     </a>
+  //   ),
+  // },
   {
     id: 6,
     link: (
