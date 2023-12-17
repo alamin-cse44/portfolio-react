@@ -7,7 +7,7 @@ import { Divider, Typography } from "@mui/material";
 const educations = [
   {
     id: 1,
-    degree: "BSc in Computer Science",
+    degree: "BSc in Computer Science & Engineering",
     institution: "University Of Asia Pacific(2018-2022)",
     grade: "3.63/4",
     description:
@@ -24,7 +24,7 @@ const educations = [
   {
     id: 3,
     degree: "Secondary School Certificate",
-    institution: "Omar Ali High School(2009-2014)",
+    institution: "Omar Ali High School(2012-2013)",
     grade: "4.75/5",
     description:
       "Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale.",
@@ -55,10 +55,8 @@ const EducationQuality = () => {
                     <Typography
                       sx={{
                         fontSize: {
-                          lg: 32,
-                          md: 32,
-                          sm: 17,
-                          xs: 17,
+                          sm: 20,
+                          xs: 16,
                         },
                         fontWeight: "700",
                         color: "#c4cfde",
@@ -69,9 +67,7 @@ const EducationQuality = () => {
                     <Typography
                       sx={{
                         fontSize: {
-                          lg: 20,
-                          md: 20,
-                          sm: 14,
+                          sm: 18,
                           xs: 14,
                         },
                         mt: 2,
@@ -108,13 +104,10 @@ const EducationQuality = () => {
               <Typography
                 sx={{
                   fontSize: {
-                    lg: 22,
-                    md: 22,
-                    sm: 16,
+                    sm: 18,
                     xs: 16,
                   },
                   textAlign: "justify",
-                  fontWeight: "600",
                   color: "#696E77",
                 }}
               >

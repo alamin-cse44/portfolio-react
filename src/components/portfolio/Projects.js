@@ -40,14 +40,12 @@ const Projects = ({ project }) => {
           sx={{ height: 240, pl: 2, borderRadius: "15px" }}
           className="portfolio-project-image"
           image={img}
-          title="green iguana"
+          title="project poster"
         />
         <CardContent>
           <Typography
             sx={{
               fontSize: {
-                lg: 22,
-                md: 22,
                 sm: 18,
                 xs: 18,
               },
@@ -62,9 +60,7 @@ const Projects = ({ project }) => {
           <Typography
             sx={{
               fontSize: {
-                lg: 20,
-                md: 20,
-                sm: 15,
+                sm: 16,
                 xs: 15,
               },
               mt: 2,

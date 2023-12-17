@@ -7,28 +7,29 @@ import { Divider, Typography } from "@mui/material";
 const jobExperience = [
   {
     id: 1,
-    degree: "Software Developer",
-    institution: "IQC(November 2022 - Present)",
-    grade: "France",
+    degree: "Frontend Developer",
+    institution: "Brogrammers Lab(October 2022 - Present)",
+    grade: "Dhaka",
     description:
-      "Expert hiring process is an important part of our age. IQC care deeply about their teams and the people who make them up."
+    "Frontend hiring process is an important part of our age. Brogrammers lab care deeply about their teams and the people who make them up."
     },
   {
     id: 2,
+    degree: "Frontend Developer",
+    institution: "IQC(November 2022 - May 2023)",
+    grade: "France",
+    description:
+      "Expert hiring process is an important part of our age. IQC Security Consultancy care deeply about their teams and the people who make them up."
+    },
+  {
+    id: 3,
     degree: "Backend Developer",
     institution: "3WIP(February 2023 - April)",
     grade: "India",
     description:
     "Backend hiring process is an important part of our age. 3WIP care deeply about their teams and the people who make them up."
     },
-  {
-    id: 3,
-    degree: "Frontend Developer",
-    institution: "Pridesys IT(September 2022 - November)",
-    grade: "Dhaka",
-    description:
-    "Frontend hiring process is an important part of our age. Pridesys care deeply about their teams and the people who make them up."
-    },
+  
 ];
 
 const JobExperience = () => {
@@ -43,7 +44,8 @@ const JobExperience = () => {
               p: 3,
               bgcolor: "#202327",
               boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
-              borderRadius: '10px'
+              borderRadius: '10px',
+              border: "1px solid #ff014f"
             }}
           >
             <Box>
@@ -53,10 +55,8 @@ const JobExperience = () => {
                     <Typography
                       sx={{
                         fontSize: {
-                          lg: 32,
-                          md: 32,
-                          sm: 17,
-                          xs: 17,
+                          sm: 20,
+                          xs: 16,
                         },
                         fontWeight: "700",
                         color: "#c4cfde",
@@ -67,9 +67,7 @@ const JobExperience = () => {
                     <Typography
                       sx={{
                         fontSize: {
-                          lg: 20,
-                          md: 20,
-                          sm: 14,
+                          sm: 18,
                           xs: 14,
                         },
                         mt: 2,
@@ -106,13 +104,10 @@ const JobExperience = () => {
               <Typography
                 sx={{
                   fontSize: {
-                    lg: 22,
-                    md: 22,
-                    sm: 16,
+                    sm: 18,
                     xs: 16,
                   },
                   textAlign: "justify",
-                  fontWeight: "600",
                   color: "#696E77",
                 }}
               >

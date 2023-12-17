@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Divider } from "@mui/material";
+import { Container, Divider } from "@mui/material";
 import { Box, Tab, Tabs } from "@mui/material";
 
 import Education from "./education/Education";
@@ -15,7 +15,7 @@ const Resume = () => {
   const [route, setRoute] = useState("education");
 
   return (
-    <Box id="resume" sx={{ mx: 2, pt: 10 }}>
+    <Container id="resume" sx={{ pt: 10 }}>
       <Box sx={{ textAlign: "center" }}>
         <Title1 title="1+ YEARS OF EXPERIENCE" />
         <Title2 title="My Resume" />
@@ -91,7 +91,7 @@ const Resume = () => {
       </Tabs>
       {route === "education" ? <Education /> : <Experience />}
       <Divider sx={{ background: "#121415", mt: 15 }} />
-    </Box>
+    </Container>
   );
 };
 

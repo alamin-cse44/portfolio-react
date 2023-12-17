@@ -1,4 +1,12 @@
-import { Box, Divider, Typography, Grid, Avatar, Stack } from "@mui/material";
+import {
+  Box,
+  Divider,
+  Typography,
+  Grid,
+  Avatar,
+  Stack,
+  Container,
+} from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -33,7 +41,7 @@ const Contact = () => {
     await console.log(container);
   }, []);
   return (
-    <Box id="contact" className="contact" sx={{ mx: 3, pt: 10 }}>
+    <Container id="contact" className="contact" sx={{ pt: 10 }}>
       {/* <Particles
         id="tsparticles"
         init={particlesInit}
@@ -111,14 +119,14 @@ const Contact = () => {
           detectRetina: true,
         }}
       /> */}
-      
+
       <Box sx={{ textAlign: "center" }}>
         <Title1 title="Contact" />
         <Title2 title="Contact With Me" />
       </Box>
       <Box sx={{ flexGrow: 1, mt: 10 }}>
         <Grid container spacing={7}>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={5}>
             <Card
               className="portfolio-project-card"
               sx={{
@@ -171,14 +179,11 @@ const Contact = () => {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: 20,
-                      md: 20,
-                      sm: 20,
-                      xs: 20,
+                      sm: 16,
+                      xs: 14,
                     },
                     mt: 2,
                     textAlign: "justify",
-                    fontWeight: "600",
                     color: "#696E77",
                   }}
                 >
@@ -189,8 +194,6 @@ const Contact = () => {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: 20,
-                      md: 20,
                       sm: 18,
                       xs: 18,
                     },
@@ -204,10 +207,8 @@ const Contact = () => {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: 20,
-                      md: 20,
                       sm: 15,
-                      xs: 15,
+                      xs: 14,
                     },
                     mt: 2,
                     fontWeight: "600",
@@ -222,44 +223,46 @@ const Contact = () => {
               <CardActions>
                 <Grid container spacing={1}>
                   <Grid item xs={12} md={12} lg={12}>
-                    <p className="poster-welcome">FIND WITH ME</p>
-                    <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
-                      <Avatar
-                        className="poster-socialIcon"
-                        sx={{
-                          width: "70px",
-                          height: "60px",
-                          bgcolor: "#202327",
-                          boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
-                        }}
-                        variant="square"
+                    <Stack direction="row" spacing={2}>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100004690398384"
+                        target="blank"
                       >
-                        <FacebookIcon style={{ fontSize: "30px" }} />
-                      </Avatar>
-                      <Avatar
-                        className="poster-socialIcon"
-                        sx={{
-                          width: "70px",
-                          height: "60px",
-                          bgcolor: "#202327",
-                          boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
-                        }}
-                        variant="rounded"
+                        <Avatar
+                          className="poster-socialIcon"
+                          sx={{
+                            bgcolor: "#202327",
+                          }}
+                          variant="square"
+                        >
+                          <FacebookIcon style={{ fontSize: "30px" }} />
+                        </Avatar>
+                      </a>
+                      <a href="https://github.com/alamin-cse44" target="blank">
+                        <Avatar
+                          className="poster-socialIcon"
+                          sx={{
+                            bgcolor: "#202327",
+                          }}
+                          variant="rounded"
+                        >
+                          <GitHubIcon style={{ fontSize: "30px" }} />
+                        </Avatar>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/rehan-mohammed-alamin-1b4587216/"
+                        target="blank"
                       >
-                        <GitHubIcon style={{ fontSize: "30px" }} />
-                      </Avatar>
-                      <Avatar
-                        className="poster-socialIcon"
-                        sx={{
-                          width: "70px",
-                          height: "60px",
-                          bgcolor: "#202327",
-                          boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
-                        }}
-                        variant="rounded"
-                      >
-                        <LinkedInIcon style={{ fontSize: "40px" }} />
-                      </Avatar>
+                        <Avatar
+                          className="poster-socialIcon"
+                          sx={{
+                            bgcolor: "#202327",
+                          }}
+                          variant="rounded"
+                        >
+                          <LinkedInIcon style={{ fontSize: "40px" }} />
+                        </Avatar>
+                      </a>
                     </Stack>
                   </Grid>
                 </Grid>
@@ -267,13 +270,13 @@ const Contact = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid item xs={12} md={7}>
             <ContactForm />
           </Grid>
         </Grid>
       </Box>
       <Divider sx={{ background: "#121415", mt: 15 }} />
-    </Box>
+    </Container>
   );
 };
 

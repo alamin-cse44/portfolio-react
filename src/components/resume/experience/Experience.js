@@ -13,9 +13,7 @@ const Experience = () => {
             <Typography
               sx={{
                 fontSize: {
-                  lg: 40,
-                  md: 35,
-                  sm: 25,
+                  sm: 30,
                   xs: 25,
                 },
                 fontWeight: "800",
@@ -36,9 +34,7 @@ const Experience = () => {
               className="education-heading"
               sx={{
                 fontSize: {
-                  lg: 40,
-                  md: 35,
-                  sm: 25,
+                  sm: 30,
                   xs: 25,
                 },
                 fontWeight: "800",

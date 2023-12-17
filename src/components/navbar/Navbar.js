@@ -13,9 +13,9 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Avatar } from "@mui/material";
+import { Avatar, Container } from "@mui/material";
 
-import logo from '../../images/logo.jpg';
+import logo from "../../images/logo.jpg";
 
 import "./Navbar.scss";
 
@@ -83,9 +83,18 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ textAlign: "center", backgroundColor: "#212428", height: '100vh' }}
+      sx={{ textAlign: "center", backgroundColor: "#212428", height: "100vh" }}
     >
-      <Typography variant="h6" sx={{ my: 2, color: "#ffffff", display: 'flex', justifyContent: 'center', gap: 2 }}>
+      <Typography
+        variant="h6"
+        sx={{
+          my: 2,
+          color: "#ffffff",
+          display: "flex",
+          justifyContent: "center",
+          gap: 2,
+        }}
+      >
         <Avatar
           alt="Remy Sharp"
           src={logo}
@@ -93,7 +102,7 @@ function DrawerAppBar(props) {
         />
         Rehan
       </Typography>
-      <Divider sx={{background: '#fff'}} />
+      <Divider sx={{ background: "#fff" }} />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.id} disablePadding>
@@ -112,46 +121,48 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: "#212428", px: '20px' }}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              display: {
-                lg: "flex",
-                alignItems: "center",
-                gap: 10,
-                xs: "none",
-                sm: "block",
-              },
-            }}
-          >
-            <Avatar
-              alt="Remy Sharp"
-              src={logo}
-              sx={{ width: 40, height: 40, marginBottom: "1px" }}
-            />
-            Rehan
-          </Typography>
-          <Box
-            sx={{ display: { xs: "none", sm: "block", lg: "flex", gap: 20 } }}
-          >
-            {navItems.map((item) => (
-              <div key={item.id}>{item.link}</div>
-            ))}
-          </Box>
-        </Toolbar>
+      <AppBar component="nav" sx={{ backgroundColor: "#212428" }}>
+        <Container>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{
+                flexGrow: 1,
+                display: {
+                  lg: "flex",
+                  alignItems: "center",
+                  gap: 10,
+                  xs: "none",
+                  sm: "block",
+                },
+              }}
+            >
+              <Avatar
+                alt="Remy Sharp"
+                src={logo}
+                sx={{ width: 40, height: 40 }}
+              />
+              Rehan
+            </Typography>
+            <Box
+              sx={{ display: { xs: "none", sm: "block", lg: "flex", gap: 20 } }}
+            >
+              {navItems.map((item) => (
+                <div key={item.id}>{item.link}</div>
+              ))}
+            </Box>
+          </Toolbar>
+        </Container>
       </AppBar>
       <Box component="nav">
         <Drawer
@@ -160,7 +171,7 @@ function DrawerAppBar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, 
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -173,13 +184,11 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </Box>
-     
     </Box>
   );
 }
 
 DrawerAppBar.propTypes = {
-  
   window: PropTypes.func,
 };
 

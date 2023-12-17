@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper";
 
-import { Box, Divider } from "@mui/material";
+import { Box, Container, Divider } from "@mui/material";
 import Title1 from "../../common/Title1";
 import Title2 from "../../common/Title2";
 
@@ -113,7 +113,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <Box id="portfolio" className="portfolio" sx={{ mx: 3, pt: 10 }}>
+      <Container id="portfolio" className="portfolio" sx={{ pt: 10 }}>
         <Box className="portfolio-top">
           <Title1 title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK" />
           <Title2 title="My Portfolio" />
@@ -163,7 +163,7 @@ const Portfolio = () => {
           ))}
         </Swiper>
         <Divider sx={{ background: "#121415", mt: 15 }} />
-      </Box>
+      </Container>
     </>
   );
 };

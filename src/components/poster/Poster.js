@@ -1,5 +1,4 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -7,11 +6,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WebIcon from "@mui/icons-material/Web";
 import JavascriptIcon from "@mui/icons-material/Javascript";
-import { Avatar, Divider, Stack, Typography } from "@mui/material";
+import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
 
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-import ar from "../../images/ar.png";
 import profile from "../../images/profile.jpg";
 
 import "./Poster.scss";
@@ -30,7 +28,7 @@ const Poster = () => {
   });
 
   return (
-    <Box id="poster" className="poster" sx={{ flexGrow: 1, mx: 5, pt: 15 }}>
+    <Container id="poster" className="poster" sx={{ flexGrow: 1,  pt: 15 }}>
       <Grid
         sx={{ display: "flex", alignItems: "center" }}
         container
@@ -207,7 +205,7 @@ const Poster = () => {
         </Grid>
       </Grid>
       <Divider sx={{ background: "#121415", mt: 15 }} />
-    </Box>
+    </Container>
   );
 };
 

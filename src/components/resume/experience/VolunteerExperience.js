@@ -54,10 +54,8 @@ const VolunteerExperience = () => {
                     <Typography
                       sx={{
                         fontSize: {
-                          lg: 32,
-                          md: 32,
-                          sm: 17,
-                          xs: 17,
+                          sm: 20,
+                          xs: 16,
                         },
                         fontWeight: "700",
                         color: "#c4cfde",
@@ -68,10 +66,10 @@ const VolunteerExperience = () => {
                     <Typography
                       sx={{
                         fontSize: {
-                          lg: 20,
-                          md: 20,
-                          sm: 14,
-                          xs: 14,
+                          fontSize: {
+                            sm: 18,
+                            xs: 14,
+                          },
                         },
                         mt: 2,
                         fontWeight: "500",
@@ -107,13 +105,10 @@ const VolunteerExperience = () => {
               <Typography
                 sx={{
                   fontSize: {
-                    lg: 22,
-                    md: 22,
-                    sm: 16,
+                    sm: 18,
                     xs: 16,
                   },
                   textAlign: "justify",
-                  fontWeight: "600",
                   color: "#696E77",
                 }}
               >

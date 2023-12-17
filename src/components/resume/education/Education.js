@@ -17,9 +17,7 @@ const Education = () => {
             <Typography
               sx={{
                 fontSize: {
-                  lg: 40,
-                  md: 35,
-                  sm: 25,
+                  sm: 30,
                   xs: 25,
                 },
                 fontWeight: "800",
@@ -40,9 +38,7 @@ const Education = () => {
               className="education-heading"
               sx={{
                 fontSize: {
-                  lg: 40,
-                  md: 35,
-                  sm: 25,
+                  sm: 30,
                   xs: 25,
                 },
                 fontWeight: "800",
