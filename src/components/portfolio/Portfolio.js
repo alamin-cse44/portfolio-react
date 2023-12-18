@@ -8,15 +8,14 @@ import { Box, Container, Divider } from "@mui/material";
 import Title1 from "../../common/Title1";
 import Title2 from "../../common/Title2";
 
-import react from "../../images/react.png";
 
 import expert from "../../images/expert.png";
 import student from "../../images/student.png";
 import doctor from "../../images/doctor.png";
 import university from "../../images/university.png";
 
-import { FaReact } from "react-icons/fa6";
-import { IoLogoReact } from "react-icons/io5";
+import { BiLogoReact, BiLogoSass, BiLogoTypescript, BiLogoFirebase, BiLogoBootstrap, BiBorderOuter, BiLogoCss3, BiLogoTailwindCss, BiLogoNodejs, BiLogoJavascript } from "react-icons/bi";
+import { SiDotnet, SiMui } from "react-icons/si";
 
 import Projects from "./Projects";
 
@@ -39,12 +38,12 @@ const Portfolio = () => {
       description:
         " A leading online platform connecting businesses with experts across various industries. Our mission is to simplify the, process of finding and hiring top talent for any project, big or small. At ExpertHire, we believe in the power of freelancing and the value it brings to both businesses and experts. We are committed to providing a user-friendly platform that makes it easy for businesses to find the perfect expert for their project, and for experts to showcase their skills and connect with potential clients. ",
       technology: [
-        { id: 1, title: "React", icon: <IoLogoReact /> },
-        { id: 2, title: "Typescript", icon: "" },
-        { id: 3, title: "Material-ui", icon: "" },
-        { id: 4, title: "Sass", icon: "" },
-        { id: 5, title: "Firebase", icon: "" },
-        { id: 6, title: "Dot net", icon: "" },
+        { id: 1, title: "React", icon: <BiLogoReact style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 2, title: "Typescript", icon: <BiLogoTypescript style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 3, title: "Material-ui", icon: <SiMui style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 4, title: "Sass", icon: <BiLogoSass style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 5, title: "Firebase", icon: <BiLogoFirebase style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 6, title: "Dot net", icon: <SiDotnet style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
       ],
     },
     {
@@ -62,10 +61,10 @@ const Portfolio = () => {
       description:
         "It’s a frontend website implemented by using React, react-router, bootstrap. This project is implemented for students to get online education services. With Careline making the transition to remote learning so easy, that too has contributed to my daughter's on-going growth. Careline made sure that they worked with the teacher and family to make the transition easy. The teacher is providing weekly zoom lessons with Varsha, and works with the students according to the devices that they have at home.",
       technology: [
-        { id: 1, title: "React", icon: react },
-        { id: 2, title: "react-bootstrap", icon: "" },
-        { id: 3, title: "react-router v5", icon: "" },
-        { id: 4, title: "css", icon: "" },
+        { id: 1, title: "React", icon: <BiLogoReact style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 2, title: "react-bootstrap", icon: <BiLogoBootstrap style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 3, title: "react-router v5", icon: <BiBorderOuter style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 4, title: "css", icon: <BiLogoCss3 style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
       ],
     },
     {
@@ -79,15 +78,15 @@ const Portfolio = () => {
       date: "01 February 2022",
       service: "Web Application",
       budget: "$100",
-      live: "https://students-careline-alamin.netlify.app/",
+      live: "https://doctors-portal-cc100.web.app/",
       description:
         "It’s a full stack website implemented by using React, React-router-6, daisy-ui, node-js, express-js, JWT, firebase, heroku where three type of users are exist patient, doctor & admin. The users must go through the authentication process for booking or treating any service. Dashboard is different for the users, patients can book service or cancel service with review. Doctors give their service by seeing the booking schedule.",
       technology: [
-        { id: 1, title: "React", icon: react },
-        { id: 2, title: "Tailwind css", icon: "" },
-        { id: 3, title: "css", icon: "" },
-        { id: 4, title: "Firebase", icon: "" },
-        { id: 5, title: "Node Js", icon: "" },
+        { id: 1, title: "React", icon: <BiLogoReact style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 2, title: "Tailwind css", icon: <BiLogoTailwindCss style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 3, title: "css", icon: <BiLogoCss3 style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 4, title: "Firebase", icon: <BiLogoFirebase style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 5, title: "Node Js", icon: <BiLogoNodejs style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
       ],
     },
     {
@@ -105,8 +104,9 @@ const Portfolio = () => {
       description:
         "It’s a University landing page website. A University website where you are available to see their education system and culture. UI is implemented by using raw HTML, CSS and Javascript for dynamic output.",
       technology: [
-        { id: 1, title: "HTML", icon: react },
-        { id: 1, title: "CSS", icon: "" },
+        { id: 1, title: "HTML", icon: <BiLogoReact style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 2, title: "CSS", icon: <BiLogoCss3 style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
+        { id: 3, title: "JavaScript", icon: <BiLogoJavascript style={{color: "#ff014f", width: "50px", height: "50px"}} /> },
       ],
     },
   ];

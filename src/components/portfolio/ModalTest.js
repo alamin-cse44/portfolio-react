@@ -1,5 +1,5 @@
 import Modal from "@mui/material/Modal";
-import { Box, Divider, Fab, Typography } from "@mui/material";
+import { Avatar, Box, Divider, Fab, Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 
@@ -13,7 +13,7 @@ import { Autoplay, Navigation } from "swiper";
 import "./ModalTest.scss";
 
 const ModalTest = ({ project, technology, open, handleClose }) => {
-  console.log(typeof technology);
+  console.log(technology);
   const {
     modalTitle,
     img,
@@ -93,8 +93,8 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
               </Grid>
 
               <Grid item xs={12} md={6} lg={6}>
-                <p className="project-name">{modalTitle}</p>
-                <p className="project-description">{brief}</p>
+                <Typography sx={{fontSize: {xs: "15", sm: 25,}, color: "#ff014f"}}>{modalTitle}</Typography>
+                <Typography sx={{fontSize: {xs: "15", sm: 20}, mt:2}}>{brief}</Typography>
                 <Box sx={{ flexGrow: 1, mt: 5 }}>
                   <Grid container spacing={2}>
                     <Grid item xs={6} md={8}>
@@ -145,21 +145,15 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                       >
                         <Box
                           className="project-technologies"
-                          style={{ textAlign: "center" }}
+                          textAlign={"center"}
                         >
                           <figure>
-                            <img
-                              style={{ width: "50px", textAlign: "center", color: "#ff014f" }}
-                              src={item.icon}
-                              alt="Tech"
-                            />
+                            {item.icon}
                           </figure>
                           {/* <p className="features-item-title">{item.title}</p> */}
                           <Typography
                             sx={{
                               fontSize: {
-                                lg: 20,
-                                md: 20,
                                 sm: 15,
                                 xs: 15,
                               },
@@ -167,6 +161,7 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                               textAlign: "center",
                               fontWeight: "600",
                               color: "#c4cfde",
+                              textTransform: "uppercase"
                             }}
                           >
                             {item.title}
