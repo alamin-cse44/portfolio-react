@@ -7,13 +7,13 @@ import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xwkdeoog");
-  if (state.succeeded) {
-    return (
-      <p style={{ fontSize: "18px", fontWeight: 700, color: "#ff014f" }}>
-        Thanks for joining!
-      </p>
-    );
-  }
+  // if (state.succeeded) {
+  //   return (
+  //     <p style={{ fontSize: "18px", fontWeight: 700, color: "#ff014f" }}>
+  //       Thanks for joining!
+  //     </p>
+  //   );
+  // }
   return (
     <Box>
       <Card
