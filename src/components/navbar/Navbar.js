@@ -18,6 +18,7 @@ import { Avatar, Container } from "@mui/material";
 import logo from "../../images/logo.jpg";
 
 import "./Navbar.scss";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -72,7 +73,7 @@ const navItems = [
   },
 ];
 
-function DrawerAppBar(props) {
+function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -135,9 +136,11 @@ function DrawerAppBar(props) {
             </IconButton>
             <Typography
               variant="h6"
-              component="div"
+              component={Link}
+              to={"/"}
               sx={{
                 flexGrow: 1,
+                textDecoration: "none",
                 display: {
                   lg: "flex",
                   alignItems: "center",
@@ -147,12 +150,16 @@ function DrawerAppBar(props) {
                 },
               }}
             >
-              <Avatar
-                alt="Remy Sharp"
-                src={logo}
-                sx={{ width: 40, height: 40 }}
-              />
-              Rehan
+              <Avatar alt="Rhan" src={logo} sx={{ width: 40, height: 40 }} />
+              <span
+                style={{
+                  color: "#ff014f",
+                  fontWeight: "bold",
+                  fontFamily: "cursive",
+                }}
+              >
+                Rehan
+              </span>
             </Typography>
             <Box
               sx={{ display: { xs: "none", sm: "block", lg: "flex", gap: 20 } }}
@@ -188,8 +195,8 @@ function DrawerAppBar(props) {
   );
 }
 
-DrawerAppBar.propTypes = {
+Navbar.propTypes = {
   window: PropTypes.func,
 };
 
-export default DrawerAppBar;
+export default Navbar;
