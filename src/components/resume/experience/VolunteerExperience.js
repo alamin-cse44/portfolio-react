@@ -50,7 +50,7 @@ const VolunteerExperience = () => {
             <Box>
               <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
-                  <Grid item xs={12} lg={10}>
+                  <Grid item xs={12} lg={9.5}>
                     <Typography
                       sx={{
                         fontSize: {
@@ -79,7 +79,7 @@ const VolunteerExperience = () => {
                       {item.institution}
                     </Typography>
                   </Grid>
-                  <Grid item xs={4} lg={2} sx={{ mt: 2 }}>
+                  <Grid item xs={4} lg={2.5} sx={{ mt: 2}}>
                     <button
                       style={{
                         backgroundColor: "#202327",

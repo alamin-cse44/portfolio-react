@@ -17,7 +17,7 @@ const Resume = () => {
   return (
     <Container id="resume" sx={{ pt: 10 }}>
       <Box sx={{ textAlign: "center" }}>
-        <Title1 title="1+ YEARS OF EXPERIENCE" />
+        <Title1 title="1.5+ YEARS OF EXPERIENCE" />
         <Title2 title="My Resume" />
       </Box>
       <Tabs
