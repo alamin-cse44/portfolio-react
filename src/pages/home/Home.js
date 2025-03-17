@@ -14,7 +14,6 @@ const Home = () => {
       <Portfolio />
       <Resume />
       <Contact />
-      <Footer />
     </div>
   );
 };
