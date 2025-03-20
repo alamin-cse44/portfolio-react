@@ -46,6 +46,7 @@ const ContactForm = () => {
                 id="email"
                 name="email"
                 placeholder="ie: nazrul@gmail.com"
+                required
               />
 
               <label className="form-label" htmlFor="phone">
@@ -67,6 +68,7 @@ const ContactForm = () => {
                 rows="4"
                 cols="50"
                 placeholder="Write your message here.."
+                required
               />
 
               <button
