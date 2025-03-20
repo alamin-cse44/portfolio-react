@@ -91,11 +91,11 @@ const ModalTest = ({ project, open, handleClose }) => {
               >
                 {title}
               </Typography>
-              <Typography sx={{ fontSize: { xs: "15", sm: 15 }, mt: 2 }}>
+              <Typography sx={{ fontSize: { xs: "15", sm: 15 }, mt: 1 }}>
                 {briefDescription}
               </Typography>
               <Box sx={{ flexGrow: 1, mt: 2 }}>
-                <Grid container spacing={1}>
+                <Grid container spacing={0.1}>
                   <Grid item lg={12}>
                     <span className="project-key">Services: </span>
                     <span className="project-value">{service}</span>
@@ -111,8 +111,28 @@ const ModalTest = ({ project, open, handleClose }) => {
               </Box>
             </Grid>
           </Grid>
-          <Divider sx={{ background: "#121415", my: 5 }} />
+          <Divider sx={{ background: "#121415", mt: 5, mb: 2 }} />
           <Box>
+            {title === "Online Bike Shop" && (
+              <p>
+                <span style={{ color: "#ff014f" }} className="project-key">
+                  Credentials:{" "}
+                </span>
+                <span className="project-value">
+                  alamin23712@gmail.com(password: pass12345)
+                </span>
+              </p>
+            )}
+            {title === "House Renting" && (
+              <p>
+                <span style={{ color: "#ff014f" }} className="project-key">
+                  Credentials:{" "}
+                </span>
+                <span className="project-value">
+                  alamin23712@gmail.com - pass1234 (password)
+                </span>
+              </p>
+            )}
             <p className="project-name">Technology</p>
             <Box sx={{ flexGrow: 1, mt: 7, mb: 5 }}>
               <Grid

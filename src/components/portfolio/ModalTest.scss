@@ -3,6 +3,7 @@
 .project {
   &-name {
     @include text-style(35px, 700, 40px, #c4cfde);
+    margin-top: 5px;
   }
   &-description {
     margin-top: 25px;
@@ -10,10 +11,10 @@
     text-align: justify;
   }
   &-key {
-    @include text-style(18px, 500, 40px, #c4cfde);
+    @include text-style(15px, 500, 40px, #c4cfde);
   }
   &-value {
-    @include text-style(18px, 500, 40px, #878e99);
+    @include text-style(15px, 500, 40px, #878e99);
   }
 
   &-cross-btn {
