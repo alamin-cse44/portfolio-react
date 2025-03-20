@@ -40,6 +40,14 @@ const navItems = [
     ),
   },
   {
+    id: 7,
+    link: (
+      <a className="navItems" href="#skills">
+        SKILLS
+      </a>
+    ),
+  },
+  {
     id: 3,
     link: (
       <a className="navItems" href="#portfolio">

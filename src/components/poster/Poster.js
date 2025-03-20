@@ -4,8 +4,8 @@ import Grid from "@mui/material/Grid";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import WebIcon from "@mui/icons-material/Web";
-import JavascriptIcon from "@mui/icons-material/Javascript";
+import DownloadIcon from "@mui/icons-material/Download";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
 
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -20,7 +20,7 @@ const Poster = () => {
       "Software Developer",
       "React.js Developer",
       "Node.js Developer",
-      "Mern Stack Dev"
+      "Mern Stack Dev",
     ],
     loop: {},
     typeSpeed: 120,
@@ -28,7 +28,7 @@ const Poster = () => {
   });
 
   return (
-    <Container id="poster" className="poster" sx={{ flexGrow: 1,  pt: 15 }}>
+    <Container id="poster" className="poster" sx={{ flexGrow: 1, pt: 15 }}>
       <Grid
         sx={{ display: "flex", alignItems: "center" }}
         container
@@ -72,24 +72,26 @@ const Poster = () => {
           </Typography>
 
           <p className="poster-description">
-            {/* I do code for software dvelopment. I can handle both client side and
-            sever side of a software. I'm used to React.js library for frontend
-            development and firebase for authentication system. Also, for the
-            behind the scenes data storage and proecessing I have skilled on
-            Node.js (Express.js framework and mongoose/mongodb as database). */}
-            I have completed my Bachelor of Science degree in computer science
-            and engineering from the University of Asia Pacific, Bangladesh. I'm
-            a positive, enthusiastic and competent web developer. I have a
-            diverse range of programming skills like : JavaScript, Bootstrap,
-            Material-UI, React.js, Node.js Firebase , Heroku, MongoDB, C, C++,
-            Python, Mongoose, MySql. I have extensive experience working both
-            alone and as a part of a team to implement a project. I’m time
-            sensitive and like to take on challenging web development projects
-            by the requirements of clients. I have working experience at IQC
-            company in France from November 2022 to May 2023 as a frontend
-            developer. At present I’m working for Brogrammers Lab as a frontend
-            Developer. I take my work as a developer and programmer seriously
-            and surely I will update myself for the rapidly changing industry.
+            I am a highly motivated and detail-oriented Web Developer with a
+            Bachelor of Science in Computer Science and Engineering from the
+            University of Asia Pacific, Bangladesh. With a strong passion for
+            building scalable and efficient web applications, I specialize in
+            modern frontend and backend technologies. My expertise includes
+            JavaScript, TypeScript, React.js, Redux, Next.js, Node.js,
+            Express.js, Material UI, Tailwind CSS, Firebase, MongoDB, Mongoose,
+            MySQL, Sequelize, OAuth, JWT, and Python, among others. I have
+            hands-on experience working both independently and collaboratively
+            in dynamic environments, ensuring that projects are delivered
+            efficiently while meeting client requirements. I previously worked
+            as a Frontend Developer at IQC, France (Nov 2022 – May 2023) and am
+            currently working at Brogrammers Lab as a Software Developer. My
+            ability to adapt to evolving technologies and my commitment to
+            continuous learning allow me to stay ahead in the fast-paced web
+            development industry. I thrive on solving complex problems and
+            taking on challenging projects that push the boundaries of modern
+            web solutions. I am eager to contribute my technical expertise and
+            problem-solving skills to impactful projects, ensuring optimal
+            performance and a seamless user experience. 🚀
           </p>
           <Grid container spacing={5} sx={{ mt: 5 }}>
             <Grid item xs={12} md={6} lg={6}>
@@ -127,7 +129,7 @@ const Poster = () => {
                   </Avatar>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/rehan-mohammed-alamin-1b4587216/"
+                  href="https://www.linkedin.com/in/al-amin-1b4587216/"
                   target="blank"
                 >
                   <Avatar
@@ -146,44 +148,43 @@ const Poster = () => {
               </Stack>
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <p className="poster-welcome">BEST SKILL ON</p>
+              <p className="poster-welcome">MY RESUME</p>
               <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
-                <Avatar
-                  className="poster-socialIcon"
-                  sx={{
-                    width: "70px",
-                    height: "60px",
-                    bgcolor: "#202327",
-                    boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
-                  }}
-                  variant="square"
+                <a
+                  href="https://drive.google.com/file/d/1gh2b05M1c35maWEWmOePFYKR-S9OevzQ/view?usp=sharing"
+                  target="blank"
                 >
-                  <WebIcon style={{ fontSize: "35px" }} />
-                </Avatar>
-                <Avatar
-                  className="poster-socialIcon"
-                  sx={{
-                    width: "70px",
-                    height: "60px",
-                    bgcolor: "#202327",
-                    boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
-                  }}
-                  variant="rounded"
+                  <Avatar
+                    className="poster"
+                    sx={{
+                      width: "70px",
+                      height: "60px",
+                      bgcolor: "#202327",
+                      boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
+                    }}
+                    variant="rounded"
+                  >
+                    <RemoveRedEyeIcon style={{ fontSize: "40px" }} />
+                  </Avatar>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/al-amin-1b4587216/"
+                  target="blank"
                 >
-                  <JavascriptIcon style={{ fontSize: "50px" }} />
-                </Avatar>
-                <Avatar
-                  className="poster-socialIcon"
-                  sx={{
-                    width: "70px",
-                    height: "60px",
-                    bgcolor: "#202327",
-                    boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
-                  }}
-                  variant="rounded"
-                >
-                  <LinkedInIcon style={{ fontSize: "40px" }} />
-                </Avatar>
+                  <Avatar
+                    className="poster"
+                    sx={{
+                      width: "70px",
+                      height: "60px",
+                      bgcolor: "#202327",
+                      boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
+                    }}
+                    variant="rounded"
+                  >
+                    <DownloadIcon style={{ fontSize: "40px" }} />
+                  </Avatar>
+                </a>
               </Stack>
             </Grid>
           </Grid>
@@ -201,7 +202,10 @@ const Poster = () => {
           }}
         >
           {/* <img src={profile} alt="profile" /> */}
-          <Avatar src={profile} sx={{width: "60%", height: "60%", border: "2px solid #ff014f"}} />
+          <Avatar
+            src={profile}
+            sx={{ width: "60%", height: "60%", border: "2px solid #ff014f" }}
+          />
         </Grid>
       </Grid>
       <Divider sx={{ background: "#121415", mt: 15 }} />

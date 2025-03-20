@@ -12,12 +12,12 @@ import { Autoplay, Navigation } from "swiper";
 
 import "./ModalTest.scss";
 
-const ModalTest = ({ project, technology, open, handleClose }) => {
-  console.log(technology);
+const ModalTest = ({ project, open, handleClose }) => {
   const {
-    modalTitle,
-    img,
-    brief,
+    title,
+    briefDescription,
+    technologies,
+    images,
     client,
     date,
     service,
@@ -72,30 +72,16 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                 modules={[Autoplay, Navigation]}
                 className="mySwiper"
               >
-                <SwiperSlide>
-                  <img
-                    src={img}
-                    height={400}
-                    alt=""
-                    style={{ width: "100%" }}
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={img}
-                    height={400}
-                    alt=""
-                    style={{ width: "100%" }}
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={img}
-                    height={400}
-                    alt=""
-                    style={{ width: "100%" }}
-                  />
-                </SwiperSlide>
+                {images?.map((image) => (
+                  <SwiperSlide>
+                    <img
+                      src={image?.url}
+                      height={400}
+                      alt=""
+                      style={{ width: "100%" }}
+                    />
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </Grid>
 
@@ -103,28 +89,16 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
               <Typography
                 sx={{ fontSize: { xs: "15", sm: 25 }, color: "#ff014f" }}
               >
-                {modalTitle}
+                {title}
               </Typography>
-              <Typography sx={{ fontSize: { xs: "15", sm: 20 }, mt: 2 }}>
-                {brief}
+              <Typography sx={{ fontSize: { xs: "15", sm: 15 }, mt: 2 }}>
+                {briefDescription}
               </Typography>
               <Box sx={{ flexGrow: 1, mt: 2 }}>
                 <Grid container spacing={1}>
                   <Grid item lg={12}>
-                    <span className="project-key">Client: </span>
-                    <span className="project-value">{client}</span>
-                  </Grid>
-                  <Grid item lg={12}>
-                    <span className="project-key">Date: </span>
-                    <span className="project-value">{date}</span>
-                  </Grid>
-                  <Grid item lg={12}>
                     <span className="project-key">Services: </span>
                     <span className="project-value">{service}</span>
-                  </Grid>
-                  <Grid item lg={12}>
-                    <span className="project-key">Budget: </span>
-                    <span className="project-value">{budget} </span>
                   </Grid>
                 </Grid>
               </Box>
@@ -146,22 +120,21 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                 spacing={{ xs: 2, md: 3, lg: 5 }}
                 columns={{ xs: 4, sm: 8, md: 12 }}
               >
-                {technology.map((item) => (
+                {technologies?.map((item) => (
                   <Grid item xs={4} md={4} key={item.id}>
                     <Paper
                       elevation={3}
                       sx={{
-                        pt: 1,
-                        pb: 3,
+                        py: 2,
                         bgcolor: "#202327",
                         boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
                       }}
                     >
                       <Box
-                        className="project-technologies"
+                        // className="project-technologies"
                         textAlign={"center"}
                       >
-                        <figure>{item.icon}</figure>
+                        {/* <figure>{item?.icon}</figure> */}
                         {/* <p className="features-item-title">{item.title}</p> */}
                         <Typography
                           sx={{
@@ -169,14 +142,13 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                               sm: 15,
                               xs: 15,
                             },
-                            mt: -2,
                             textAlign: "center",
                             fontWeight: "600",
                             color: "#c4cfde",
                             textTransform: "uppercase",
                           }}
                         >
-                          {item.title}
+                          {item?.value}
                         </Typography>
                       </Box>
                     </Paper>
@@ -184,8 +156,8 @@ const ModalTest = ({ project, technology, open, handleClose }) => {
                 ))}
               </Grid>
             </Box>
-            <p className="project-name">What They Do? </p>
-            <Typography sx={{ mt: 5, mb:16 }} className="project-description">
+            <p className="project-name">Core Functionalities </p>
+            <Typography sx={{ mt: 5, mb: 16 }} className="project-description">
               {description}
             </Typography>
           </Box>

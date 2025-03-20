@@ -2,7 +2,7 @@ import React from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import {Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -15,8 +15,9 @@ import ModalTest from "./ModalTest";
 import "./Portfolio.scss";
 
 const Projects = ({ project }) => {
-  const { title, img, brief, live } = project;
-  console.log(project.technology);
+  const { title, briefDescription, live } = project;
+  // console.log(project.technology);
+  const brief = briefDescription.slice(0, 75);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -39,7 +40,7 @@ const Projects = ({ project }) => {
         <CardMedia
           sx={{ height: 240, pl: 2, borderRadius: "15px" }}
           className="portfolio-project-image"
-          image={img}
+          image={project?.images[0]?.url}
           title="project poster"
         />
         <CardContent>
@@ -69,7 +70,21 @@ const Projects = ({ project }) => {
               color: "#c4cfde",
             }}
           >
-            {brief}
+            {brief}{" "}
+            <button
+              onClick={handleOpen}
+              style={{
+                backgroundColor: "transparent",
+                // border: "1px solid #c4cfde",
+                border: "none",
+                color: "#c4cfde",
+                cursor: "pointer",
+                padding: "5px 10px",
+                fontWeight: "600",
+              }}
+            >
+              See more..
+            </button>
           </Typography>
         </CardContent>
         <CardActions sx={{ display: "flex", gap: "10px" }}>
@@ -90,12 +105,7 @@ const Projects = ({ project }) => {
         </CardActions>
       </Card>
 
-      <ModalTest
-        project={project}
-        technology={project.technology}
-        open={open}
-        handleClose={handleClose}
-      />
+      <ModalTest project={project} open={open} handleClose={handleClose} />
     </div>
   );
 };
