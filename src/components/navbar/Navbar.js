@@ -158,7 +158,7 @@ function Navbar(props) {
                 },
               }}
             >
-              <Avatar alt="Rhan" src={logo} sx={{ width: 40, height: 40 }} />
+              <Avatar alt="Rehan" src={logo} sx={{ width: 40, height: 40 }} />
               <span
                 style={{
                   color: "#ff014f",

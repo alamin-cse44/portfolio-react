@@ -1,7 +1,13 @@
-.MuiToolbar-root{
-  // background-color: red;
-  // margin-left: -24px;
-  // margin-right: -24px;
+@media (min-width: 600px) {
+  .css-hyum1k-MuiToolbar-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.css-hyum1k-MuiToolbar-root {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .navItems {
