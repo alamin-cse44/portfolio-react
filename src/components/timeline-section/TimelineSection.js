@@ -43,11 +43,13 @@ const timelineData = [
       {
         role: "Level - 1",
         title: "Complete Web Development",
+        platform: "Programing Hero",
         date: "ID : WEB4-1552",
       },
       {
         role: "Level - 2",
         title: "Next Level Web Development",
+        platform: "Programing Hero",
         // date: "ID : WEB4-1552",
       },
       {
@@ -135,6 +137,9 @@ const TimelineSection = () => {
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#666", mt:0.5 }}>
                       {item?.gpa}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#666", mt:0.5 }}>
+                      {item?.platform}
                     </Typography>
                     <Typography variant="caption" sx={{ color: "#666" }}>
                       {item.date}

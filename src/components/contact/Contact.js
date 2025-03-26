@@ -250,7 +250,7 @@ const Contact = () => {
                         </Avatar>
                       </a>
                       <a
-                        href="https://www.linkedin.com/in/rehan-mohammed-alamin-1b4587216/"
+                        href="https://www.linkedin.com/in/al-amin-1b4587216/"
                         target="blank"
                       >
                         <Avatar
