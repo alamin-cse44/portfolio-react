@@ -132,7 +132,15 @@ function Navbar(props) {
       <CssBaseline />
       <AppBar component="nav" sx={{ backgroundColor: "#212428" }}>
         <Container>
-          <Toolbar>
+          <Toolbar
+            sx={{
+              // backgroundColor: "red",
+              px: {
+                xs: 0,
+                sm: 0,
+              },
+            }}
+          >
             <IconButton
               color="inherit"
               aria-label="open drawer"

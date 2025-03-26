@@ -11,6 +11,7 @@ import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import profile from "../../images/profile.jpg";
+import resume from "../../images/resume/Al_Amin_Frontend_Developer.pdf"
 
 import "./Poster.scss";
 
@@ -20,7 +21,7 @@ const Poster = () => {
       "Software Developer",
       "React.js Developer",
       "Node.js Developer",
-      "Mern Stack Dev",
+      "Next.js Developer",
     ],
     loop: {},
     typeSpeed: 120,
@@ -72,31 +73,15 @@ const Poster = () => {
           </Typography>
 
           <p className="poster-description">
-            I am a highly motivated and detail-oriented Web Developer with a
-            Bachelor of Science in Computer Science and Engineering from the
-            University of Asia Pacific, Bangladesh. With a strong passion for
-            building scalable and efficient web applications, I specialize in
-            modern frontend and backend technologies. My expertise includes
-            JavaScript, TypeScript, React.js, Redux, Next.js, Node.js,
-            Express.js, Material UI, Tailwind CSS, Firebase, MongoDB, Mongoose,
-            MySQL, Sequelize, OAuth, JWT, and Python, among others. I have
-            hands-on experience working both independently and collaboratively
-            in dynamic environments, ensuring that projects are delivered
-            efficiently while meeting client requirements. I previously worked
-            as a Frontend Developer at IQC, France (Nov 2022 – May 2023) and am
-            currently working at Brogrammers Lab as a Software Developer. My
-            ability to adapt to evolving technologies and my commitment to
-            continuous learning allow me to stay ahead in the fast-paced web
-            development industry. I thrive on solving complex problems and
-            taking on challenging projects that push the boundaries of modern
-            web solutions. I am eager to contribute my technical expertise and
-            problem-solving skills to impactful projects, ensuring optimal
-            performance and a seamless user experience. 🚀
+            Graduated in Computer Science and Engineering from the University of
+            Asia Pacific, I am a passionate software engineer committed to
+            delivering standard solutions. I strive to apply deep technical
+            expertise to develop efficient and scalable software.
           </p>
-          <Grid container spacing={5} sx={{ mt: 5 }}>
+          <Grid container spacing={5} sx={{ mt: 1 }}>
             <Grid item xs={12} md={6} lg={6}>
               <p className="poster-welcome">FIND WITH ME</p>
-              <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
+              <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
                 <a
                   href="https://www.facebook.com/profile.php?id=100004690398384"
                   target="blank"
@@ -104,28 +89,28 @@ const Poster = () => {
                   <Avatar
                     className="poster-socialIcon"
                     sx={{
-                      width: "70px",
-                      height: "60px",
+                      width: "50px",
+                      height: "50px",
                       bgcolor: "#202327",
                       boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
                     }}
                     variant="square"
                   >
-                    <FacebookIcon style={{ fontSize: "30px" }} />
+                    <FacebookIcon style={{ fontSize: "40px" }} />
                   </Avatar>
                 </a>
                 <a href="https://github.com/alamin-cse44" target="blank">
                   <Avatar
                     className="poster-socialIcon"
                     sx={{
-                      width: "70px",
-                      height: "60px",
+                      width: "50px",
+                      height: "50px",
                       bgcolor: "#202327",
                       boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
                     }}
                     variant="rounded"
                   >
-                    <GitHubIcon style={{ fontSize: "30px" }} />
+                    <GitHubIcon style={{ fontSize: "40px" }} />
                   </Avatar>
                 </a>
                 <a
@@ -135,8 +120,8 @@ const Poster = () => {
                   <Avatar
                     className="poster-socialIcon"
                     sx={{
-                      width: "70px",
-                      height: "60px",
+                      width: "50px",
+                      height: "50px",
                       bgcolor: "#202327",
                       boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
                     }}
@@ -149,7 +134,7 @@ const Poster = () => {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <p className="poster-welcome">MY RESUME</p>
-              <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
+              <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
                 <a
                   href="https://drive.google.com/file/d/1gh2b05M1c35maWEWmOePFYKR-S9OevzQ/view?usp=sharing"
                   target="blank"
@@ -157,32 +142,32 @@ const Poster = () => {
                   <Avatar
                     className="poster"
                     sx={{
-                      width: "70px",
-                      height: "60px",
+                      width: "50px",
+                      height: "50px",
                       bgcolor: "#202327",
                       boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
                     }}
                     variant="rounded"
                   >
-                    <RemoveRedEyeIcon style={{ fontSize: "40px" }} />
+                    <RemoveRedEyeIcon style={{ fontSize: "30px" }} />
                   </Avatar>
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/al-amin-1b4587216/"
-                  target="blank"
+                  href={resume}
+                  download="Al_Amin_Frontend_Developer.pdf"
                 >
                   <Avatar
                     className="poster"
                     sx={{
-                      width: "70px",
-                      height: "60px",
+                      width: "50px",
+                      height: "50px",
                       bgcolor: "#202327",
                       boxShadow: "0 3px 10px rgb(0 0 0/ 0.99)",
                     }}
                     variant="rounded"
                   >
-                    <DownloadIcon style={{ fontSize: "40px" }} />
+                    <DownloadIcon style={{ fontSize: "30px" }} />
                   </Avatar>
                 </a>
               </Stack>
