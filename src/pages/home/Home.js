@@ -6,6 +6,7 @@ import Resume from "../../components/resume/Resume";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
 import Skills from "../../components/skills/Skills";
+import TimelineSection from "../../components/timeline-section/TimelineSection";
 
 const Home = () => {
   return (
@@ -14,7 +15,8 @@ const Home = () => {
       <Features />
       <Skills />
       <Portfolio />
-      <Resume />
+      <TimelineSection />
+      {/* <Resume /> */}
       <Contact />
     </div>
   );
