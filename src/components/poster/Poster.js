@@ -36,7 +36,7 @@ const Poster = () => {
         spacing={5}
       >
         <Grid item xs={12} md={6} lg={6}>
-          <p className="poster-welcome">Welcome to my world</p>
+          {/* <p className="poster-welcome">Welcome to my world</p> */}
           <Typography
             sx={{
               fontSize: {

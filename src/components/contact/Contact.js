@@ -202,7 +202,7 @@ const Contact = () => {
                   }}
                 >
                   <span style={{ color: "#fff" }}>Phone : </span>
-                  <span style={{ color: "#c4cfde" }}>01643530690</span>
+                  <span style={{ color: "#c4cfde" }}>+880 1643530690</span>
                 </Typography>
                 <Typography
                   sx={{
