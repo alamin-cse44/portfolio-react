@@ -11,7 +11,7 @@ import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import profile from "../../images/profile.jpg";
-import resume from "../../images/resume/Al_Amin_Frontend_Developer.pdf"
+import resume from "../../images/resume/Al_Amin_Software_Developer.pdf";
 
 import "./Poster.scss";
 
@@ -136,7 +136,7 @@ const Poster = () => {
               <p className="poster-welcome">MY RESUME</p>
               <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
                 <a
-                  href="https://drive.google.com/file/d/1gh2b05M1c35maWEWmOePFYKR-S9OevzQ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1I9EMcWFe6qiOFgUWb5jNptHlcWyU7-Ej/view?usp=sharing"
                   target="blank"
                 >
                   <Avatar
@@ -153,10 +153,7 @@ const Poster = () => {
                   </Avatar>
                 </a>
 
-                <a
-                  href={resume}
-                  download="Al_Amin_Frontend_Developer.pdf"
-                >
+                <a href={resume} download="Al_Amin_Software_Developer.pdf">
                   <Avatar
                     className="poster"
                     sx={{
