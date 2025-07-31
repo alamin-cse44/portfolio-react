@@ -113,7 +113,7 @@ const ModalTest = ({ project, open, handleClose }) => {
           </Grid>
           <Divider sx={{ background: "#121415", mt: 5, mb: 2 }} />
           <Box>
-            {title === "Online Bike Shop" && (
+            {/* {title === "Online Bike Shop" && (
               <p>
                 <span style={{ color: "#ff014f" }} className="project-key">
                   Credentials:{" "}
@@ -132,7 +132,7 @@ const ModalTest = ({ project, open, handleClose }) => {
                   alamin23712@gmail.com - pass1234 (password)
                 </span>
               </p>
-            )}
+            )} */}
             <p className="project-name">Technology</p>
             <Box sx={{ flexGrow: 1, mt: 7, mb: 5 }}>
               <Grid
